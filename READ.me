@@ -1,0 +1,56 @@
+<?php
+require_once dirname(__FILE__).'/'.'autoload.php';
+use usualtool\Api\Api;
+$api=new Api();
+/**
+ * 敏感词图识别
+ * 参数：text
+ * 说明：html文本
+ * 分别返回敏感词汇及敏感图地址
+ */
+//echo $api->Run("nsfw","text=");
+/**
+ * 图片文字识别
+ * 参数：image
+ * 说明：url地址/base64字符串。该参数传入时可为URL地址，也可以使用urlencode编码后的base64编码
+ * 返回图片上文字的数组
+ */
+//echo $api->Run("ocr","image=http://frame.usualtool.com/assets/logo.png");
+/**
+ * 文字转语音
+ * 参数：sex
+ * 说明：性别。0为女生，1为男生
+ * 参数：text
+ * 说明：转译文本，限4800字内
+ * 生成一个临时MP3文件，请及时储存
+ */
+//echo $api->Run("voice","sex=0&text=您好");
+/**
+ * 电话号码归属地
+ * 参数：phone
+ * 说明：固定号码或手机号码
+ * 返回地址、区号、运营商、邮编
+ */
+//echo $api->Run("telephone","phone=13800000000");
+/**
+ * 域名Whois
+ * 参数：domain
+ * 说明：域名
+ * 返回Whois信息
+ */
+//echo $api->Run("whois","domain=baidu.com");
+/**
+ * 图片二值化
+ * 参数：image
+ * 说明：base64图片编码，base64编码需进行urlencode编码传递
+ * 返回二值化的base64图片编码
+ */
+//echo $api->Run("imgbin","image=".urlencode(library\UsualToolInc\UTInc::ImgToBase64("http://frame.usualtool.com/assets/logo.png")));
+/**
+ * 域名/IP地址归属
+ * 参数：domain
+ * 说明：域名/IP
+ * 返回固定两组对比数据，物理位置、运营商、经纬度（粗略定位），择优选用
+ */
+//echo $api->Run("ipaddress","domain=aliyun.com");
+//......不一一例举，参看官方手册
