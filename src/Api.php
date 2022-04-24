@@ -12,6 +12,6 @@ class Api{
             $from=UsualToolInc\UTInc::CurPageUrl();
             $url=$this->authurl."?AuthCode=".$this->authcode."&FromUrl=".$from."&Type=".$this->type."-".$api;
             $result=UsualToolInc\UTInc::HttpPost($url,$param);
-            return str_replace("#","$",str_replace("&","=",UsualToolInc\UTInc::StrSubstr("<php>","</php>",$result)));
+            return $result;
       }
 }
